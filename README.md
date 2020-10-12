@@ -1,44 +1,72 @@
+<h3 align="center">
+    <img alt="Happy" title="Happy" width="128px" src="./assetsGitHub/logo.svg">
+</h3>
+<h1 align="center">
+    Happy
+</h1>
+<p align="center" style="width: 70%; margin: 20px auto;">
+    This project was develop at Rocketseat's Next Level Week event during five days (10/12 to 10/16) about Children's day. Use it as you like, It is open-source :)
+</p>
+
+<h1 align="center">
+    <img src="./assetsGitHub/bannerHappy.png" />
+</h1>
+
+## Menu
+
+- [Technologies](#-tecnhnologies)
+- [How to use](#-how-to-use)
+
+---
+
+## 🚀 Technologies
+
+This project was developed at Rocketseat's Next Level Week 3 event!
+
+- [ReactJS]()
+- [React Leaflet]()
+- [Styled Components]()
+
+## 🖥 How to use
+
+You should have:
+
+```
+- Yarn or NPM
+- NodeJS
+```
+
+Run this app in your computer following the steps below
+
+```bash
+# Clone this repository
+$ git clone https://github.com/Possebas/happy-nlw3/tree/master/
+
+# Enter on folder
+$ cd happy-nlw3/web
+
+# Then, install project's dependencies
+$ yarn
+# or
+$ npm install
+
+# Start application
+$ yarn start
+# or
+$ npm start
+
+# After that, a web page will be open on your main browser, enjoy!
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 📃 License
+
+This project is under MIT license. Check file [LICENSE](LICENSE) for more details.
+
+---
+
+<h4 align="center">
+    Developed with ❤️ by <b>Gustavo Possebon</b>
+</h4>
