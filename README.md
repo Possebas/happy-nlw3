@@ -23,9 +23,9 @@
 
 This project was developed at Rocketseat's Next Level Week 3 event!
 
-- [ReactJS]()
-- [React Leaflet]()
-- [Styled Components]()
+- [ReactJS](https://reactjs.org/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Styled Components](https://styled-components.com/)
 
 ## 🖥 How to use
 
