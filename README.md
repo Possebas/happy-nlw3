@@ -26,12 +26,15 @@ This project was developed at Rocketseat's Next Level Week 3 event!
 - [ReactJS](https://reactjs.org/)
 - [React Leaflet](https://react-leaflet.js.org/)
 - [Styled Components](https://styled-components.com/)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## 🚀️ Added features
 
+- Search the user's current location with lib `$ expo location`
 - Implementation of the IBGE API on the web and mobile, disabling the button to navigate to the next page while the state and city are not selected
 - Implementation of the `whatsapp` field in the api created with NodeJS, and integrating with the direct link to the Whatsapp app without a number registered in the orphanage
-- Search the user's current location with lib `$ expo location`
 
 ## 🖥 How to use
 
