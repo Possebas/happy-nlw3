@@ -1,11 +1,10 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Landing from './pages/Landing'
-import CreateOrphanage from './pages/CreateOrphanages'
-import Orphanage from './pages/Orphanages'
-import OrphanagesMap from './pages/OrphanagesMap'
-
+import Landing from "./pages/Landing/";
+import CreateOrphanage from "./pages/CreateOrphanages";
+import Orphanage from "./pages/Orphanages";
+import OrphanagesMap from "./pages/OrphanagesMap/index";
 
 function Routes() {
   return (
@@ -18,7 +17,7 @@ function Routes() {
         <Route path="/orphanages/:id" component={Orphanage} />
       </Switch>
     </BrowserRouter>
-  )
+  );
 }
 
-export default Routes
+export default Routes;

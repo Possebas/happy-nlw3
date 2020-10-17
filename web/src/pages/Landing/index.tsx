@@ -1,10 +1,10 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi'
-import axios from 'axios'
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+import axios from "axios";
 
-import './styles.css'
-import logoImg from '../../images/logo.svg'
+import "./styles.css";
+import logoImg from "../../images/logo.svg";
 
 interface IBGEUFProps {
   sigla: string;
@@ -15,86 +15,89 @@ interface IBGECityProps {
 }
 
 const Landing: React.FC = () => {
-  const [ufs, setUfs] = useState<string[]>([])
-  const [cities, setCities] = useState<string[]>([])
-  const [selectedUf, setSelectedUf] = useState('💛')
-  const [selectedCity, setSelectedCity] = useState('💛')
-  
+  const [ufs, setUfs] = useState<string[]>([]);
+  const [cities, setCities] = useState<string[]>([]);
+  const [selectedUf, setSelectedUf] = useState("💛");
+  const [selectedCity, setSelectedCity] = useState("💛");
+
   // chamadas api IGBE
   useEffect(() => {
-
     axios
-      .get<IBGEUFProps[]>('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-      .then(response => {
-        const ufNames = response.data.map(uf => uf.sigla)
+      .get<IBGEUFProps[]>(
+        "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
+      )
+      .then((response) => {
+        const ufNames = response.data.map((uf) => uf.sigla);
 
-        setUfs(ufNames)
-    })
-  }, [])
-  
+        setUfs(ufNames);
+      });
+  }, []);
+
   useEffect(() => {
-
     axios
-      .get<IBGECityProps[]>(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`)
-      .then(response => {
-        const cityNames = response.data.map(city => city.nome)
+      .get<IBGECityProps[]>(
+        `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`
+      )
+      .then((response) => {
+        const cityNames = response.data.map((city) => city.nome);
 
-        setCities(cityNames)
-
-      })
-
-  }, [selectedUf])
+        setCities(cityNames);
+      });
+  }, [selectedUf]);
 
   function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
-    const uf = event.target.value
+    const uf = event.target.value;
 
-    setSelectedUf(uf)
+    setSelectedUf(uf);
   }
 
   function handleSelectCity(event: ChangeEvent<HTMLSelectElement>) {
-    const city = event.target.value
+    const city = event.target.value;
 
-    setSelectedCity(city)
+    setSelectedCity(city);
   }
 
   return (
     <div id="page-landing">
       <div className="content-wrapper">
-        <img src={logoImg} alt="Happy"/>
-
+        <img src={logoImg} alt="Happy" />
 
         <main>
           <h1>Leve felicidade para o mundo</h1>
-          <p>Encontre um orfanato na sua cidade e mude o dia de muitas crianças.</p>
+          <p>
+            Encontre um orfanato na sua cidade e mude o dia de muitas crianças.
+          </p>
         </main>
 
-
         <div className="select-container-group">
-
           <div className="select-container">
-            <select 
-              name="uf" 
-              id="uf" 
-              value={selectedUf} 
+            <select
+              name="uf"
+              id="uf"
+              value={selectedUf}
               onChange={handleSelectUf}
             >
               <option value="😻">Estados</option>
-              {ufs.map(uf => (
-                <option key={uf} value={uf}>{uf}</option>
+              {ufs.map((uf) => (
+                <option key={uf} value={uf}>
+                  {uf}
+                </option>
               ))}
             </select>
           </div>
 
           <div className="select-container">
-            <select 
-              name="city" 
-              id="city" 
+            <select
+              name="city"
+              id="city"
               value={selectedCity}
               onChange={handleSelectCity}
             >
               <option value="💛">Cidades</option>
-              {cities.map(city => (
-                <option key={city} value={city}>{city}</option>
+              {cities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
               ))}
             </select>
           </div>
@@ -104,19 +107,18 @@ const Landing: React.FC = () => {
           <strong>{selectedCity}</strong>
           <span>{selectedUf}</span>
         </div>
-      
-        <Link 
+
+        <Link
           to="app"
-          className={selectedUf && selectedCity === '💛' ? "disabled" : "enter-app"}
-          
+          className={
+            selectedUf && selectedCity === "💛" ? "disabled" : "enter-app"
+          }
         >
           <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
         </Link>
-
-        
       </div>
-   </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Landing;

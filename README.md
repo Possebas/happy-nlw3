@@ -9,7 +9,7 @@
 </p>
 
 <h1 align="center">
-    <img src=".github/bannerHappy.png" />
+    <img src=".github/landing.jpg" />
 </h1>
 
 ## Menu
