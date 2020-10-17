@@ -1,26 +1,27 @@
-import React from "react";
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font'
+import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito'
 
-import {
-  Nunito_600SemiBold,
-  Nunito_700Bold,
-  Nunito_800ExtraBold,
-} from "@expo-google-fonts/nunito";
-import { useFonts } from "expo-font";
-import OrphanagesMap from "./src/pages/OrphanagesMap";
-import Routes from "./src/routes";
+import Routes from './src/routes';
 
 export default function App() {
-  const [fontsloaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,
     Nunito_800ExtraBold,
-  });
-  
-  console.log("teste")
+  })
 
-  if (!fontsloaded) {
+  if (!fontsLoaded) {
     return null;
   }
 
-  return <Routes />;
+  return (
+    <>
+      <Routes />
+      <StatusBar style="dark" />
+    </>
+  );
 }
+
